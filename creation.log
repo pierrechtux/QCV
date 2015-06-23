@@ -1,0 +1,53 @@
+QCV : Questions à choix variable 
+Creation de la base de données Postgresql
+
+[pierre@etxea pierre]$ su
+Password:
+[root@etxea pierre]# su -l postgres
+[postgres@etxea pgsql]$ createuser admindb
+Shall the new user be allowed to create databases? (y/n) n
+Shall the new user be allowed to create more new users? (y/n) y
+CREATE USER
+
+[postgres@etxea pgsql]$ psql
+postgres=# create group saisie;
+CREATE GROUP    
+postgres=# create group admin;
+CREATE GROUP 
+postgres=# \q 
+postgres=# create user pierre in group admin;
+CREATE USER                                                                     
+----------------------------------------
+# Destruction de la BD QCV
+psql -c 'drop database qcv;'
+ou :
+dropdb qcv
+# creation de la BD QCV
+createdb qcv
+psql qcv -f /home/pierre/QCV/tablesQCV.sql
+psql qcv -f /home/pierre/QCV/grantQCV.sql
+psql qcv -f /home/pierre/QCV/initdata.sql
+psql qcv -f /home/pierre/QCV/dataQCV.sql
+
+----------------------------------------
+rechargement par copy sous psql
+
+[postgres@etxea pgsql]$ psql qcv
+qcv=# COPY  QUESTIONS from '/home/pierre/QCV/Data/QUESTIONS.txt';
+COPY   
+----------------------------------------
+[postgres@etxea pgsql]$ psql qcv
+qcv=# create user pierre in group saisie ;
+CREATE USER
+----------------------------------------
+Utilisation de pg_dump
+
+[postgres@etxea pgsql]$ pg_dump -s /home/pierre/QCV/Data/dumpTables
+[postgres@etxea pgsql]$ pg_dump -s /home/pierre/QCV/Data/data12-04-2001.txt
+
+Rechargement :
+[postgres@etxea pgsql]$ psql qcv -f /home/pierre/QCV/Data/dumpTables
+[postgres@etxea pgsql]$t=refthemes; psql qcv -t $t /home/pierre/QCV/ backups/$t`date +'%Y-%m-%d'`.txt
+----------------------------------------
+
+
