@@ -1,3 +1,5 @@
+BEGIN TRANSACTION;    -- embeds all script within a transaction
+
 \connect - postgres
 -- Tous utilisateurs
 GRANT SELECT on personnes TO PUBLIC;
@@ -60,3 +62,5 @@ GRANT SELECT,INSERT,UPDATE on multimedia TO GROUP admin;
 GRANT SELECT,INSERT,UPDATE on sujets TO GROUP admin;
 GRANT SELECT,INSERT,UPDATE on memoire TO GROUP admin;
 GRANT SELECT,INSERT,UPDATE on details TO GROUP admin;
+
+COMMIT;  -- end of transaction

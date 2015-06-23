@@ -1,4 +1,5 @@
-Pour info.... vient d'ailleurs
+BEGIN TRANSACTION;    -- embeds all script within a transaction
+--Pour info.... vient d'ailleurs
 
 
 CREATE FUNCTION Class_Type(text) RETURNS text AS '
@@ -23,3 +24,5 @@ LANGUAGE 'plpgsql';
 CREATE TRIGGER trg_Archiv_Site 
 	BEFORE INSERT OR DELETE OR UPDATE ON Tbsite
 	FOR EACH ROW EXECUTE PROCEDURE Archiv_Site();
+
+COMMIT;  -- end of transaction

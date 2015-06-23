@@ -1,3 +1,5 @@
+BEGIN TRANSACTION;    -- embeds all script within a transaction
+
 \connect - postgres
 COPY "personnes" FROM stdin;
 pierre	jarillon@abul.org
@@ -46,3 +48,5 @@ mp3
 ogg
 url
 \.
+
+COMMIT;  -- end of transaction

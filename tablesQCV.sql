@@ -1,3 +1,5 @@
+BEGIN TRANSACTION;    -- embeds all script within a transaction
+
 -- \connect - postgres
 CREATE SEQUENCE "no_quest";
 CREATE SEQUENCE "no_test";
@@ -91,3 +93,4 @@ RETURNS interval
 AS 'SELECT CAST(($1 - $2) AS INTERVAL);'
 LANGUAGE 'SQL';
 
+COMMIT;  -- end of transaction

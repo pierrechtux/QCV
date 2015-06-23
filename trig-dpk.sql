@@ -1,3 +1,5 @@
+BEGIN TRANSACTION;    -- embeds all script within a transaction
+
 -- =========================================================================
 -- Triggers and functions - Pierre Jarillon - 2005-07-19 - 16:00
 -- =========================================================================
@@ -66,3 +68,5 @@ CREATE TRIGGER freeok
   FOR EACH ROW EXECUTE PROCEDURE checkfree();
 
 -- =========================================================================
+
+COMMIT;  -- end of transaction
