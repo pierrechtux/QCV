@@ -1,6 +1,6 @@
 # QCV
-Questions Ã  Choix Variables - 
-QCV : Questions à choix variable
+
+QCV : Questions à Choix Variable
 
 Bien entendu, tout est couvert par la GPL :-)
 
