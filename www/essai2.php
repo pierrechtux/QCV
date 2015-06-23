@@ -15,7 +15,7 @@
       <TD>&nbsp;&nbsp;&nbsp;</TD>
       <TD>
          <div align="CENTER">
-         <font COLOR="#FF6100" size="+3"><b><i>Questions à choix Multiples</font> </i></b><br>
+         <font COLOR="#FF6100" size="+3"><b><i>Questions Ã  choix Multiples</font> </i></b><br>
          <font COLOR="#000000" size="+1">Testez vos connaissances</font>
          </div>
       </TD>
@@ -33,14 +33,14 @@
 ?>
 <form method="POST" action="" >
 <table border=0i cellpadding=15>
-<tr><td>Un thème<br>
+<tr><td>Un thÃ¨me<br>
 <?php listOptions("refthemes","GDTC-REF"); ?>
 </td><td>Un niveau de pertinence<br>
 <?php listOptionsLabel("pertinences", "9"); ?>
 </td></tr>
 <tr><td>Un nombre maximal de questions<br>
 <input name="NBRMAX" size=8 type=int value=20>
-</td><td>Un niveau de difficulté<br>
+</td><td>Un niveau de difficultÃ©<br>
 <?php listOptionsLabel("difficultes", "9"); ?>
 </td></tr>
 </table>

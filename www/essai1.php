@@ -9,7 +9,7 @@
   <hr>
 
 <?php  
-#-- Listes  sur une table Postgresql avec choix par défaut
+#-- Listes  sur une table Postgresql avec choix par dÃ©faut
 #---------------Option simple sans Label--------------------
 
 function listOptions($dataset,$choixdef)

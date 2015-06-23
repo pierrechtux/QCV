@@ -1,6 +1,6 @@
 Boutons
 -----
-Générés avec Gimp, Extensions, Script-Fu, Buttons, Simple Beveled button.
+GÃ©nÃ©rÃ©s avec Gimp, Extensions, Script-Fu, Buttons, Simple Beveled button.
 
 Taille 96x37 pixels
 

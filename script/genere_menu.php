@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 
 <?php  
-#-- Listes  sur une table avec choix par défaut
+#-- Listes  sur une table avec choix par dÃ©faut
 #---------------Option simple sans Label--------------------
 
 function listOptions($dataset,$choixdef,$champ)

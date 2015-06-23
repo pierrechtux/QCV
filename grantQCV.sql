@@ -48,7 +48,7 @@ GRANT SELECT,INSERT,UPDATE on details TO GROUP contrib;
 -- Exceptions
 GRANT INSERT,UPDATE on questions TO GROUP master;
 REVOKE INSERT,UPDATE on memoire FROM GROUP master;
--- Administrateur des tables de référence
+-- Administrateur des tables de rÃ©fÃ©rence
 GRANT SELECT,INSERT,UPDATE on personnes TO GROUP admin;
 GRANT SELECT,INSERT,UPDATE on typemultimedia TO GROUP admin;
 GRANT SELECT,INSERT,UPDATE on difficultes TO GROUP admin;

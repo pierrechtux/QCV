@@ -5,7 +5,7 @@
   require("script/script_qcm.php");
   require("script/commun.php");
   
-  haut_de_page_qcm ("QCM","Questions à choix multiple","Testez vos connaissances");
+  haut_de_page_qcm ("QCM","Questions Ã  choix multiple","Testez vos connaissances");
 
   if($aConstruire) 
 	$questions = construire_tableau($refthemes, $pertinences, $difficultes, $nbQuestions); 
@@ -13,14 +13,14 @@
 $nbQuestions = count($questions);
 
   if($nbQuestions == 0) {
-  echo "<CENTER><h2>Aucune question correspond à votre demande </h2><BR><BR>".
+  echo "<CENTER><h2>Aucune question correspond Ã  votre demande </h2><BR><BR>".
   "<a href=\"qcm.php\">retour</a></CENTER>";
   exit;
 }
 
 	if(isset($choix)) {
 		$questions[$numQuestion-1][3] = $choix;	
-		echo "choix précédent : ". $choix;
+		echo "choix prÃ©cÃ©dent : ". $choix;
 	}
 
 	echo "<CENTER>";

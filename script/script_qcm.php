@@ -6,7 +6,7 @@ require("./commun.php");
 
 function construire_tableau($theme=0,  $pertinence=0, $diff=0, $nbQuestions) {
 	$connexion = connect($host, $port, $user, $password, $database);
-	//On récupère un recordset correspondant aux critères
+	//On rÃ©cupÃ¨re un recordset correspondant aux critÃ¨res
 	$query = "SELECT Q.noq, Q.question, Q.reponse ".
 	"FROM questions Q";
 
@@ -21,7 +21,7 @@ function construire_tableau($theme=0,  $pertinence=0, $diff=0, $nbQuestions) {
 	$Nbr=numrows($result);
 	echo "Nombre d'enregistrements : ". $Nbr."<BR>";
 
-	//Organisation aléatoire des questions
+	//Organisation alÃ©atoire des questions
 	$ints = range(0,$Nbr - 1);
 	srand(time());
 	shuffle($ints);	
@@ -30,7 +30,7 @@ function construire_tableau($theme=0,  $pertinence=0, $diff=0, $nbQuestions) {
 	if($Nbr < $nbQuestions)
 		$nbQuestions = $Nbr;
 
-	// On construit le tableau permettant de trier aléatoirement
+	// On construit le tableau permettant de trier alÃ©atoirement
 	for ($i=0; $i < $nbQuestions && $row = fetch_array($result,$ints[$i]); $i++){
 		echo "libelle Q : ". $row[1]."<BR>";
 		$tabQ[$i][0] = $row[0];  // recuperation du numero,

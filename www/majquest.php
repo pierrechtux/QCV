@@ -5,8 +5,8 @@
   require("inc_select.php");
   global $database;
  
-  haut_de_page_qcm ("QCM - MaJ question","Questions à Choix Multiple",
-	"Mise à jour d'une question");
+  haut_de_page_qcm ("QCM - MaJ question","Questions Ã  Choix Multiple",
+	"Mise Ã  jour d'une question");
 
   $database = pg_Connect("", "", "", "", "qcm"); # connect to the database
   if (!$database) { echo "Connection to database failed."; exit; }
@@ -14,18 +14,18 @@
 
 <!-- ------------ Menu principal ------------ -->
 
- <!-- le formulaire s'appelle lui-même -->
+ <!-- le formulaire s'appelle lui-mÃªme -->
 
 <CENTER>
 <TABLE CELLPADDING=8 CELLSPACING=0 BORDER=0 WIDTH="80%">
 <TR align="center">
-    <TH> Accès à une question</TH>
+    <TH> AccÃ¨s Ã  une question</TH>
     <TH>&nbsp;</TH>
     <TH>Autre action</TH>
 </TR>
 <TR><TD bgcolor="#FFC38B" align="center">
    <FORM method="post" action="<? echo basename($PHP_SELF); ?>">
-  	<p>Quel numéro de question ?<br> <input TYPE="text"  NAME="noq" size="12"></p> 
+  	<p>Quel numÃ©ro de question ?<br> <input TYPE="text"  NAME="noq" size="12"></p> 
 	<p><INPUT type="submit" value="Confirmer"></p>
    </FORM>
 </TD><TD>

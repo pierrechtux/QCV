@@ -4,7 +4,7 @@
   require("inc_select.php");
   global $database;
  
-  haut_de_page_qcm ("Accueil QCM","Questions à choix multiple","Testez vos connaissances");
+  haut_de_page_qcm ("Accueil QCM","Questions Ã  choix multiple","Testez vos connaissances");
   echo"<CENTER><H2>  Choisissez : </H2>";
 
   $database = pg_Connect("", "", "", "", "qcm"); # connect to the database
@@ -13,7 +13,7 @@
 <form method="POST" action="" >
 <table border=0i cellpadding=15>
   <tr>
-    <td>Un thème<br>
+    <td>Un thÃ¨me<br>
 	<?php listOptions("refthemes","GDTC-RES"); ?></td>
     <td>Un niveau de pertinence<br>
 	<?php listOptionsLabel("pertinences", "2"); ?></td>
@@ -22,7 +22,7 @@
   <tr>
     <td>Un nombre maximal de questions<br>
 	<input name="NBRMAX" size=8 type=int value=20></td>
-    <td>Un niveau de difficulté<br>
+    <td>Un niveau de difficultÃ©<br>
 	<?php listOptionsLabel("difficultes", "3"); ?></td>
   </tr>
 </table>

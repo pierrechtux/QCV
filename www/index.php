@@ -4,7 +4,7 @@
   require("inc_entete.php");
   global $database;
  
-  haut_de_page_qcm ("Accueil QCM","Questions ‡ choix multiple","Testez vos connaissances");
+  haut_de_page_qcm ("Accueil QCM","Questions √† choix multiple","Testez vos connaissances");
 
   $database = pg_Connect("", "", "", "", "qcm"); # connect to the database
   if (!$database) { echo "Connection to database failed."; exit; }
@@ -13,14 +13,14 @@
 <CENTER>
 <HR WIDTH=90%>
   <FONT COLOR="#4AB0A9"><b>
-    Fonctionne gr‚ce aux Logiciels libres : Linux, Apache, PHP, Postgresql
+    Fonctionne gr√¢ce aux Logiciels libres : Linux, Apache, PHP, Postgresql
   </b></FONT>
 <HR WIDTH=90%>
 </CENTER>
 
 <!-- ------------ Menu principal ------------ -->
 
- <!-- le formulaire s'appelle lui-mÍme -->
+ <!-- le formulaire s'appelle lui-m√™me -->
 <FORM method="post" action="<? echo basename($PHP_SELF); ?>">
 
 <CENTER>
@@ -37,9 +37,9 @@
 </TD><TD bgcolor="#FFC38B">
 	<TABLE CELLPADDING=5 CELLSPACING=0 BORDER=0 WIDTH="80%">
 	  <TR><TD><input TYPE="radio" NAME="mode" VALUE="TRA"></TD><TD>M'entrainer</TD></TR>
-	  <TR><TD><input TYPE="radio" NAME="mode" VALUE="RES"></TD><TD>Voir mes rÈsultats</TD></TR>
+	  <TR><TD><input TYPE="radio" NAME="mode" VALUE="RES"></TD><TD>Voir mes r√©sultats</TD></TR>
 	  <TR><TD><input TYPE="radio" NAME="mode" VALUE="CER"></TD><TD>Passer une certification</TD></TR>
-	  <TR><TD><input TYPE="radio" NAME="mode" VALUE="MAJ"></TD><TD>Enrichir la base de donnÈes</TD></TR>
+	  <TR><TD><input TYPE="radio" NAME="mode" VALUE="MAJ"></TD><TD>Enrichir la base de donn√©es</TD></TR>
 	</TABLE>
 </TD><TD>
 	&nbsp;

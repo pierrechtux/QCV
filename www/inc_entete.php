@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <?php  
-#-- Début de page QCM
+#-- DÃ©but de page QCM
 
 function haut_de_page_qcm ($titrepage, $titre, $soustitre)
 {
