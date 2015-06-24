@@ -7,9 +7,13 @@ Bien entendu, tout est couvert par la GPL :-)
 Installation de postgresql
 
 Démarrer la base de données et se connecter sous le user postgres :
+
 su
+
 su - posgres
+
 initdb
+
 /etc/init.d/postgresql
 
 Le fichier creation.log contient toutes les opérations
