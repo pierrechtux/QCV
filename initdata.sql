@@ -4,6 +4,7 @@ BEGIN TRANSACTION;    -- embeds all script within a transaction
 COPY "personnes" FROM stdin;
 pierre	jarillon@abul.org
 regis	regis@couraud
+pierre2	pierre.chevalier1967@free.fr
 \.
 COPY "refthemes" FROM stdin;
 reseaux	pierre
